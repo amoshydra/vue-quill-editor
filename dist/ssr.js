@@ -111,7 +111,7 @@ var quillDirective = function quillDirective(globalOptions) {
             var range = quill.getSelection();
             quill.root.innerHTML = newData;
             setTimeout(function () {
-              quill.setSelection(range);
+              if (range) quill.setSelection(range);
             });
           }
         } else {
